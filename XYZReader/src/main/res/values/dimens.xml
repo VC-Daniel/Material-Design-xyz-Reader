@@ -1,0 +1,25 @@
+<resources>
+    <!-- detail -->
+    <dimen name="detail_title_text_size">32sp</dimen>
+    <dimen name="detail_body_text_size">22sp</dimen>
+    <dimen name="by_line_text_size">16sp</dimen>
+    <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.25</item>
+
+    <dimen name="app_bar_elevation">4dp</dimen>
+    <dimen name="fab_elevation_at_rest">6dp</dimen>
+    <dimen name="fab_press_translation_z">6dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_size">48dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+
+    <dimen name="screen_edge_keyline">16dp</dimen>
+    <dimen name="card_edge_keyline">@dimen/screen_edge_keyline</dimen>
+    <dimen name="tool_bar_height">56dp</dimen>
+    <dimen name="tool_bar_title_margin_bottom">32dp</dimen>
+    <dimen name="expanded_tool_bar">300dp</dimen>
+
+    <dimen name="item_margin_default">8dp</dimen>
+    <dimen name="item_margin_small">4dp</dimen>
+    <dimen name="item_padding_large">16dp</dimen>
+
+</resources>
