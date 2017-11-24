@@ -43,7 +43,6 @@
 
     <style name="body_text" parent="@style/TextAppearance.AppCompat.Medium">
         <item name="android:textColor">@color/textColorBody</item>
-        <item name="android:textColorLink">@color/textColorBodyAlt</item>
         <item name="android:textSize">@dimen/detail_body_text_size</item>
     </style>
 

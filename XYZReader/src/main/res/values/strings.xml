@@ -11,5 +11,9 @@
     <string name="title_activity_sample">SampleActivity</string>
     <string name="SampleTitleText">The Son Of The Wolf</string>
     <string name="SampleAuthorInfoText">By Isaac Asimov</string>
+    <string name="storyImageThumbnailDescription">Displays the image associated with the story on this card</string>
+    <string name="unableToLoadStory">Unable to load article, please try again later</string>
+    <string name="storyLoadedMessage">Story loaded, enjoy!</string>
+    <string name="dismissActionMessage">DISMISS</string>
 
 </resources>

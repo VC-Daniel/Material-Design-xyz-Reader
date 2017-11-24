@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
@@ -182,6 +183,15 @@ public class ArticleDetailFragment extends Fragment implements
         bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
 
         if (mCursor != null) {
+            // display that the story was loaded in a snackbar
+            String snackBarMessage = getString(R.string.storyLoadedMessage);
+            int snackbarDisplayLength = Snackbar.LENGTH_LONG;
+            int snackbarColor = getResources().getColor(R.color.primaryColor);
+
+            Snackbar informationalSnackbar = Snackbar.make(this.mRootView, snackBarMessage, snackbarDisplayLength);
+            informationalSnackbar.getView().setBackgroundColor(snackbarColor);
+            informationalSnackbar.show();
+
             mRootView.setAlpha(0);
             mRootView.setVisibility(View.VISIBLE);
             mRootView.animate().alpha(1);
@@ -222,6 +232,26 @@ public class ArticleDetailFragment extends Fragment implements
                         }
                     });
         } else {
+            //
+            // Tell the user no story was loaded in a snackbar
+            //
+            String snackBarErrorMessage = getString(R.string.unableToLoadStory);
+            int snackbarDisplayLength = Snackbar.LENGTH_INDEFINITE;
+            int snackbarColor = getResources().getColor(R.color.primaryColor);
+            String actionLabelMessage = getString(R.string.dismissActionMessage);
+
+            // Display the snackbar until the user dismisses it
+            final Snackbar errorSnackbar = Snackbar.make(this.mRootView, snackBarErrorMessage,snackbarDisplayLength);
+            errorSnackbar.getView().setBackgroundColor(snackbarColor);
+            errorSnackbar.setAction(actionLabelMessage, new View.OnClickListener (){
+
+                @Override
+                public void onClick(View view) {
+                    errorSnackbar.dismiss();
+                }
+            });
+            errorSnackbar.show();
+
             mRootView.setVisibility(View.GONE);
             titleView.setTitle("N/A");
             bylineView.setText("N/A");
