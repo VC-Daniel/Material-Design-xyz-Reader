@@ -40,6 +40,9 @@ import com.example.xyzreader.data.ArticleLoader;
  * A fragment representing a single Article detail screen. This fragment is
  * either contained in a {@link ArticleListActivity} in two-pane mode (on
  * tablets) or a {@link ArticleDetailActivity} on handsets.
+ *
+ * The logic to display snackbars is inspired by the tutorial at:
+ * https://spin.atomicobject.com/2017/07/10/android-snackbar-tutorial/
  */
 public class ArticleDetailFragment extends Fragment implements
         LoaderManager.LoaderCallbacks<Cursor> {
